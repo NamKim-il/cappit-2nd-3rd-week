@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <script> 
+    var a=new Array();
+    var b=new Array();
+    var ans=0;
+    for(var i=0;i<10;i++) 
+      a[i]=prompt('i');
+
+    b[0]=a[0];
+    for(var l=1;l<10;l++)
+      {
+      b[l]=Number(a[l])+Number(b[l-1]);
+      if(Math.abs(Number(b[l])-100) < Math.abs(Number(b[l-1])-100))
+        ans=b[l];
+      }
+    document.write(ans);
+    </script>
+  </body>
+</html>
