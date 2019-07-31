@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <script> 
+    var a=new Array();
+    var n;
+    n=prompt('n');
+    a[0]=1;
+    a[1]=1;
+    for(var l=2;l<=n;l++)
+      {
+        a[l]=a[l-1]+a[l-2];
+      }
+    document.write((a[n]%10007));
+    </script>
+  </body>
+</html>
