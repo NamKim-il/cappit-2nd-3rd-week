@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <script> 
+    var a=new Array();
+    var n;
+    var m=new Array();
+    n=prompt('n');
+    for(var i=0;i<n;i++)
+     m[i]=prompt('i');
+    a[0]=1;
+    a[1]=1;
+    a[2]=1;
+    a[3]=2;
+    a[4]=2;
+    for(var i=5;i<Math.max.apply(null,m);i++)
+    {
+      a[i]=Number(a[i-1])+Number(a[i-5]);
+    }
+    for(var i=0;i<n;i++)
+    {
+      document.write(a[m[i]-1],'<br>')
+    }
+    
+    </script>
+  </body>
+</html>
