@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <script> 
+    var a=new Array();
+    var n,m;
+    var count;
+    var ans=32;
+    n=prompt('n');
+    m=prompt('m');
+    for(var i=0;i<n;i++)
+    {
+      a[i]=prompt(i+'번째 행');
+    }
+    for(var i=0;i<n-7;i++)
+    {
+      for(var j=0;j<m-7;j++)
+      {
+        count=0;
+        for(var k=0;k<8;k++)
+          for(var l=0;l<8;l++)
+          {
+            if((k+l)%2==0&&a[i+k][j+l]=='B')
+            count++;
+            if((k+l)%2==1&&a[i+k][j+l]=='W')
+            count++;
+          }
+        if(count>32) count=64-count;
+        if(ans>count)
+          ans=count;
+      }
+    }
+    document.write(ans);
+    </script>
+  </body>
+</html>
